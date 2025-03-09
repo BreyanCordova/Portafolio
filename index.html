@@ -4,45 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <!--------------------- HEADER ---------------------->
-    <header class="navbar">
-        <div class="navbar_logo">
-            <img src="../Portafolio/assets/logo_html.png" alt="Header" class="logo">
-            <p class="navbar_name">Portafolio</p>
-        </div>
-        <div>
-            <nav class="header_nav_titles">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-            </nav>
-        </div>
+
+    <header>
     </header>
+
     <!--------------------- Main ---------------------->
+
     <main class="main_class">
-        <section id="home" class="section_home">
-            <div class="section_home_name">
-                <h1>Breyan Alexander</h1>
-                <p class="section_home_p_subtitle">Desarrollador Web Junior</p>
+        <section class="home" id="home">
+            <div class="home_div">
+                <picture class="home_picture">
+                    <img src="../Portafolio/assets/perfil.jpeg" alt="Retrato del dev" class="home_picture_img">
+                </picture>
+                <p class="home_name">Hello World! My name is <strong class="home_name_user">Breyan Cordova</strong></p>
+                <h1 class="home_title" >JUNIOR FRONTEND DEVELOPER</h1>
+                <p class="home_subtitle">Soy un apasionado del desarrollo web y actualmente estoy en un proceso
+                    de aprendizaje continuo en JavaScript, HTML y CSS como parte del
+                    programa Oracle Next Education. Estoy construyendo mi portafolio para compartir mis
+                    proyectos y demostrar mi progreso.</p>
+                <div class="home_skills">
+                        <div class="home_skills_svg"> 
+                            <svg class="home_skills_svg_html" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>   
+                            <p >HTML</p>         
+                        </div>
+                        <div class="home_skills_svg"> 
+                            <svg class="home_skills_svg_css xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M376.3 32L0 32 0 408.3c0 19 7.6 37.2 21 50.7s31.7 21 50.7 21l304.6 0c19 0 37.2-7.6 50.7-21s21-31.7 21-50.7l0-304.6c0-19-7.6-37.2-21-50.7s-31.7-21-50.7-21zM332.4 431.4c-7.7-8.5-11.7-20.7-12-36.6l31.3 0c.2 14.1 5.1 21.1 14.8 21.1c4.9 0 8.4-1.6 10.5-4.7c2-3.1 3-8 3-14.8c0-5.4-1.3-9.9-4-13.4c-3.5-4.2-8.1-7.5-13.2-9.5L351.2 368c-10.3-4.9-17.8-10.8-22.5-17.6c-4.5-6.8-6.7-16.3-6.7-28.4c0-13.6 4-24.6 11.8-33.1c8.1-8.5 19.1-12.7 33.2-12.7c13.6 0 24.1 4.2 31.5 12.5c7.5 8.4 11.5 20.3 11.8 35.9l-30.1 0c.2-5.1-.9-10.2-3-14.8c-1.7-3.4-5-5.1-10-5.1c-8.8 0-13.2 5.2-13.2 15.7c0 5.3 1.1 9.4 3.2 12.6c3.1 3.5 7 6.2 11.4 7.8l11.1 4.9c11.5 5.3 19.7 11.7 24.8 19.4c5.1 7.7 7.6 18 7.6 31c0 15.5-4 27.4-12.3 35.7c-8.2 8.3-19.5 12.5-34.1 12.5s-25.6-4.2-33.4-12.7zm-101 0c-7.7-8.5-11.7-20.7-12-36.6l31.3 0c.2 14.1 5.1 21.1 14.8 21.1c4.9 0 8.4-1.6 10.4-4.7c2-3.1 3-8 3-14.8c0-5.4-1.3-9.9-3.9-13.4c-3.5-4.2-8.1-7.5-13.2-9.5L250.2 368c-10.3-4.9-17.8-10.8-22.5-17.6c-4.5-6.8-6.7-16.3-6.7-28.4c0-13.6 4-24.6 11.8-33.1c8.1-8.5 19.1-12.7 33.2-12.7c13.6 0 24.1 4.2 31.4 12.5c7.6 8.4 11.5 20.3 11.9 35.9l-30.1 0c.2-5.1-.9-10.2-3-14.8c-1.7-3.4-5-5.1-10-5.1c-8.8 0-13.2 5.2-13.2 15.7c0 5.3 1.1 9.4 3.2 12.6c3.1 3.5 7 6.2 11.4 7.8l11.1 4.9c11.5 5.3 19.7 11.7 24.8 19.4c5.1 7.7 7.6 18 7.6 31c0 15.5-4.1 27.4-12.3 35.7s-19.5 12.5-34.1 12.5s-25.6-4.2-33.4-12.7zm-105.6 1.1c-8.4-7.7-12.5-19.2-12.5-34.5l0-75.4c0-15.2 4.4-26.7 13.2-34.6c8.9-7.8 20.7-11.8 35.2-11.8c14.1 0 25.2 4 33.4 12c8.3 8 12.5 20 12.5 35.9l0 6-33.1 0 0-5.8c0-6.1-1.3-10.7-4-13.6c-1.1-1.5-2.6-2.7-4.3-3.5s-3.5-1.2-5.4-1.1c-5.4 0-9.2 1.8-11.4 5.6c-2.3 5.2-3.3 10.8-3 16.4l0 65.5c0 13.7 4.8 20.6 14.4 20.8c4.5 0 7.9-1.6 10.2-4.8c2.5-4.1 3.7-8.8 3.5-13.6l0-4.9 33.1 0 0 5.1c0 10.6-2.1 19.5-6.2 26.6c-4 6.9-9.9 12.5-17.1 16c-7.7 3.7-16.1 5.5-24.6 5.3c-14.2 0-25.5-3.9-33.8-11.6z"/></svg>
+                            <p>CSS</p>          
+                        </div>
+                        <div class="home_skills_svg"> 
+                            <svg class="home_skills_svg_js" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM180.9 444.9c-33.7 0-53.2-17.4-63.2-38.5L152 385.7c6.6 11.7 12.6 21.6 27.1 21.6c13.8 0 22.6-5.4 22.6-26.5V237.7h42.1V381.4c0 43.6-25.6 63.5-62.9 63.5zm85.8-43L301 382.1c9 14.7 20.8 25.6 41.5 25.6c17.4 0 28.6-8.7 28.6-20.8c0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5c0-31.6 24.1-55.6 61.6-55.6c26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18c-12.3 0-20.1 7.8-20.1 18c0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2c0 37.8-29.8 58.6-69.7 58.6c-39.1 0-64.4-18.6-76.7-43z"/></svg>      
+                            <p>JavaScript</p>   
+                        </div>
+                </div>
+
+                <!--
+                <div class="home_redes">
+                    <div class="home_redes_svg">
+                           <svg class="home_redes_svg_github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                           <p>Github</p>
+                    </div>
+                   <div class="home_redes_svg">
+                           <svg class="home_redes_svg_github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                           <p>Linkedin</p>
+                    </div>
+               </div>
+               -->
+
             </div>
     </section>          
 
-        <section id="about" class="section_about">
-            <div class="section_about_content">
-                <p>
-                    Soy un apasionado del desarrollo web y actualmente estoy en un proceso
-                    de aprendizaje continuo en JavaScript, HTML y CSS como parte del
-                    programa Oracle Next Education. Me encanta crear proyectos prácticos
-                    que me ayuden a mejorar mis habilidades, Estoy construyendo mi portafolio para compartir mis
-                    proyectos y demostrar mi progreso como desarrollador. Me interesa
-                    aprender más sobre tecnologías frontend y backend para convertirme en
-                    un desarrollador web completo.
-                </p>
-            </div>
+    
+        <section class="repositorio" id="repositorio" >
+
+            <h1 class="repositorio_h1">Projectos Realizados</h1>
+
+                <div class="repositorio_content">
+
+
+                    <div class="repositorio_content_block">
+                        <picture class="repositorio_picture">
+                            <img class="repositorio_picture_img" src="https://github.com/BreyanCordova/Amigo-Secreto/blob/main/assets/amigo-secreto.png?raw=true">
+                        </picture>
+                        <p class="repositorio_text_title">Amigo Secreto</p>
+                        <p class="repositorio_text">Este es un repositorio de un juego desarrollado en el curso de Alura Latam</p>
+                    </div>
+                    <div class="repositorio_content_block">
+                        <picture class="repositorio_picture">
+                            <img class="repositorio_picture_img" src="../Portafolio/assets/construccion.jpg">
+                        </picture>
+                        <p class="repositorio_text_title">Commit en Progreso</p>
+                        <p class="repositorio_text">Estamos trabajando en este repositorio. Git push pendiente...</p>
+                    </div>
+
+                    <div class="repositorio_content_block">
+                        <picture class="repositorio_picture">
+                            <img class="repositorio_picture_img" src="../Portafolio/assets/construccion.jpg">
+                        </picture>
+                        <p class="repositorio_text_title">Commit en Progreso</p>
+                        <p class="repositorio_text">Estamos trabajando en este repositorio. Git push pendiente...</p>
+                    </div>
+
+                    <div class="repositorio_content_block">
+                        <picture class="repositorio_picture">
+                            <img class="repositorio_picture_img" src="../Portafolio/assets/construccion.jpg">
+                        </picture>
+                        <p class="repositorio_text_title">Commit en Progreso</p>
+                        <p class="repositorio_text">Estamos trabajando en este repositorio. Git push pendiente...</p>
+                    </div>
+
+                </div>
+            
         </section>
     </main>
+    
     <!--------------------- FOOTER ---------------------->
     <footer>
         <p>&copy; 2025 Todos los derechos reservados.</p>
