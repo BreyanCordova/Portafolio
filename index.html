@@ -6,6 +6,11 @@
     <title>Portafolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght,wdth@0,400,75;0,400,87.5;0,400,100;0,700,75;0,700,87.5;0,700,100;1,400,75;1,400,87.5;1,400,100;1,700,75;1,700,87.5;1,700,100&family=Roboto+Serif:ital,wght,wdth@0,400,75;0,400,87.5;0,400,100;0,700,75;0,700,87.5;0,700,100;1,400,75;1,400,87.5;1,400,100;1,700,75;1,700,87.5;1,700,100&display=swap" rel="stylesheet" />
+    
 </head>
 <body>
     <!--------------------- HEADER ---------------------->
@@ -21,8 +26,25 @@
                 <picture class="home_picture">
                     <img src="https://github.com/BreyanCordova/Portafolio_Breyan/blob/main/assets/perfil.jpeg?raw=true" alt="Retrato del dev" class="home_picture_img">
                 </picture>
-                <p class="home_name">Hello World! My name is <strong class="home_name_user">Breyan Cordova</strong></p>
+                <p class="home_name">My name is <strong class="home_name_user">Breyan Cordova</strong></p>
                 <h1 class="home_title" >JUNIOR FRONTEND DEVELOPER</h1>
+
+                <script>
+                    function actualizarTamañoTexto() {
+                        const h1 = document.getElementById("title");
+                        const fontSize = window.getComputedStyle(h1).fontSize;
+                        h1.textContent = `Tamaño: ${fontSize}`;
+                    }
+            
+                    // Ejecutar al cargar y en cada cambio de tamaño
+                    window.addEventListener("resize", actualizarTamañoTexto);
+                    actualizarTamañoTexto();
+                </script>
+
+
+
+
+
                 <p class="home_subtitle">Soy un apasionado del desarrollo web y actualmente estoy en un proceso
                     de aprendizaje continuo en JavaScript, HTML y CSS como parte del
                     programa Oracle Next Education. Estoy construyendo mi portafolio para compartir mis

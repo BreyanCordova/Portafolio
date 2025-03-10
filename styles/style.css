@@ -1,73 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
 :root {
-    /* 🎨 Colores */
-    --color-negro: #0a0a0a;
-    --color-blanco: #ffffff;
-    --color-trans: hsla(0, 0%, 100%, 0.5); /* Blanco con transparencia */
-    --color-azul-real: #0057B7;
-    --color-suave: #292C34;
+    /* Paleta de colores */
+    --color-primary         : #0057B7;  /* Azul Real */
+    --color-secondary       : #FFB703;  /* Amarillo dorado */
 
-    /* 🎨 Colores de tecnologías */
-    --color-html: #F16529;
-    --color-css: #663399;
-    --color-js: #F0DB4F;
+    /* Colores neutros */
+    --color-light           : #F5F5F5;  /* Blanco humo */
+    --color-gray            : #7A7A7A;  /* Gris medio */
+    --color-dark            : #0A0A0A;  /* Negro */
 
-    /* 🖋️ Tipografías generales */
-    --font-primary: "Fredoka", sans-serif;
-    --font-mono: "IBM Plex Mono", monospace;
+    /* Colores de estados */
+    --color-success         : #28A745;  /* Verde éxito */
+    --color-error           : #D72638;  /* Rojo error */
 
-    /* 🔤 Tamaños de fuente responsivos con clamp(min, preferido, max) */
-    --size-h1: clamp(2rem, 5vw, 4rem); /* Ajuste entre 2rem y 4rem */
-    --size-name: clamp(1rem, 3vw, 1.5rem);
-    --size-subtitle: clamp(1rem, 3vw, 1.5rem);
-    --size-skill: clamp(1rem, 2.5vw, 1.2rem);
-    --size-repo-title: clamp(1rem, 3vw, 1.5rem);
-    --size-repo-text: clamp(0.8rem, 2vw, 1rem);
+    /* Colores de tecnologías */
+    --color-html            : #F16529;
+    --color-css             : #2965F1;
+    --color-js              : #F0DB4F;
 
-    /* 🔥 Pesos de fuente */
-    --weight-light: 300;
-    --weight-regular: 400;
-    --weight-medium: 500;
-    --weight-bold: 700;
+    /* Tipografías generales */
+    --font-primary          : "Roboto", sans-serif;
+    --font-secondary        : "Roboto Serif", serif;
 
-    /* 📏 Espaciados responsivos */
-    --spacing-xs: clamp(0.3rem, 1vw, 0.5rem);
-    --spacing-sm: clamp(0.5rem, 1.5vw, 1rem);
-    --spacing-md: clamp(1rem, 3vw, 2rem);
-    --spacing-lg: clamp(2rem, 5vw, 4rem);
+    /* Estilos de fuentes */
+    --font-style-italic     : italic;
+    --font-style-normal     : normal;
 
-    /* 📏 Tamaños adaptativos */
-    --width-container: min(90%, 1200px); /* Máximo de 1200px pero adaptable */
-    --img-size: clamp(10rem, 20vw, 20rem); /* Imágenes redimensionables */
+    /* Tamaños de fuente (responsivos) */
+    --font-size-xl          : clamp(2rem,     5vw,    4rem);
+    --font-size-lg          : clamp(1.25rem,  3.5vw,  2rem);
+    --font-size-md          : clamp(1rem,     3vw,    1.5rem);
+    --font-size-sm          : clamp(0.875rem, 2.5vw,  1.25rem);
+    --font-size-xs          : clamp(0.8rem,   2vw,    1rem);
 
-    /* 🏠 Estilos específicos */
-    --font-h1: var(--weight-bold) var(--size-h1)/1.2 var(--font-primary);
-    --font-name: var(--weight-light) var(--size-name)/1.2 var(--font-mono);
-    --font-subtitle: var(--weight-light) var(--size-subtitle)/1.2 var(--font-primary);
-    --font-skill-svg: var(--weight-regular) var(--size-skill)/1.2 var(--font-primary);
-    --font-repo-title: var(--weight-bold) var(--size-repo-title)/1.2 var(--font-primary);
-    --font-repo-text: var(--weight-medium) var(--size-repo-text)/1.2 var(--font-primary);
+    /* Altura de línea */
+    --font-line-xl          : 1.4;
+    --font-line-lg          : 1.6;
+    --font-line-md          : 1.5;
+    --font-line-sm          : 1.4;
+    --font-line-xs          : 1.2;
+
+    /* Pesos de fuente */
+    --font-weight-regular   : 400;
+    --font-weight-medium    : 500;
+    --font-weight-bold      : 700;
+
+    /* Anchos de fuente */
+    --font-width-condensed     : 75;
+    --font-width-semicondensed : 87.5;
+    --font-width-normal        : 100;
+
+    /* Estilos de texto optimizados */
+    --font-h1       : var(--font-style-normal) var(--font-weight-bold)     var(--font-size-xl) / var(--font-line-xl) var(--font-primary);
+    --font-title    : var(--font-style-normal) var(--font-weight-bold)     var(--font-size-lg) / var(--font-line-lg) var(--font-primary);
+    --font-subtitle : var(--font-style-normal) var(--font-weight-regular)  var(--font-size-md) / var(--font-line-md) var(--font-primary);
+    --font-body     : var(--font-style-normal) var(--font-weight-regular)  var(--font-size-sm) / var(--font-line-sm) var(--font-primary);
+    --font-caption  : var(--font-style-normal) var(--font-weight-medium)   var(--font-size-xs) / var(--font-line-xs) var(--font-primary);
+
+    /* Espaciados responsivos */
+    --spacing-lg    : clamp(2rem,  5vw,  4rem);
+    --spacing-md    : clamp(1rem,  3vw,  2rem);
+    --spacing-sm    : clamp(0.5rem,1.5vw,1rem);
+    --spacing-xs    : clamp(0.3rem,1vw,  0.5rem);
+
+    /* Tamaños adaptativos */
+    --width-container  : min(90%,1200px);  
+    --img-size         : clamp(10rem,20vw,20rem);
 }
 
-
-
 /* Reset de estilos */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        background-color: var(--color-negro);
-        font-family: var(--font-primary);
-        min-height: 100dvh;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-dark);
+    font-family: var(--font-primary);
+    min-height: 100dvh;
+}
 
 /* ====================== MAIN ====================== */
 .main_class {
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -78,33 +93,33 @@
 /* ______________Section Home______________*/
 
 .home { /* section Home */
-
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     height: 100dvh;
-    width:100%;
-
+    width: 100%;
 }
-.home_div{ /* Ordena los elementos del home */
+
+.home_div { /* Ordena los elementos del home */
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.home_picture{ /*Contendor de la foto del Desarrollador*/
+.home_picture { /* Contenedor de la foto del Desarrollador */
     position: relative;
     width: 20rem;
     height: 20rem;
     margin-top: 4rem;
 }
-.home_picture_img{ /* Foto del Desarrollador */
+
+.home_picture_img { /* Foto del Desarrollador */
     width: 100%;
     height: 100%;
     object-fit: cover; 
     border-radius: 50%;
-    border:0.5rem solid var(--color-azul-real);
+    border: 0.5rem solid var(--color-primary);
 }
 
 .home_name,
@@ -116,12 +131,12 @@
 
 .home_name {
     font-weight: 300;
-    color: var(--color-trans);
+    color: var(--color-light);
 }
 
 .home_name_user {
     font-weight: 700;
-    color: var(--color-azul-real);
+    color: var(--color-primary);
 }
 
 .home_title { /* H1 */
@@ -129,11 +144,10 @@
     font-optical-sizing: auto;
     font-variation-settings: "wdth" 100;
     padding-top: 2rem;
-    color: var(--color-blanco);
+    color: var(--color-light);
 }
 
 .home_subtitle { /* Texto debajo del H1 */
-    
     font: var(--font-subtitle);
     font-optical-sizing: auto;
     font-variation-settings: "wdth" 100;
@@ -144,53 +158,54 @@
     padding-right: 10%;
     margin-top: 2rem;
     padding-bottom: 2rem;
-    color: var(--color-trans);
+    color: var(--color-light);
 }
-.home_skills{
+
+.home_skills {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     margin-bottom: 2rem;
-    
 }
 
-.home_skills_svg{
+.home_skills_svg {
     font: var(--font-skill-svg);
     width: 10rem;
     height: 3rem;
-    color: var(--color-blanco);  
+    color: var(--color-light);  
     display: flex;
     justify-content: center; 
     align-items: center; 
-    margin:2rem;
+    margin: 2rem;
     padding: 1rem;
-    gap:10px;
-    background-color: var(--color-suave);
+    gap: 10px;
+    background-color: var(--color-secondary);
     border-radius: 50px;
 }
 
-.home_skills_svg_github{
+.home_skills_svg_github {
     fill: #ffffff;
     height: 2rem;
 }
 
-.home_skills_svg_html{
+.home_skills_svg_html {
     fill: #ff4800;
     height: 2rem;
 }
-.home_skills_svg_css{
+
+.home_skills_svg_css {
     fill: #663399;
     height: 2rem;
 }
-    
-.home_skills_svg_js{
+
+.home_skills_svg_js {
     fill: #eeff00;
     height: 2rem;
 }
 
-.home_redes{
+.home_redes {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -199,24 +214,21 @@
     margin: 2rem;
 }
 
-.home_redes_svg{
+.home_redes_svg {
     width: 10rem;
     height: 3.5rem;   /* Alto del rectángulo */
-    color: var(--color-blanco);   /* Color del texto */
-
+    color: var(--color-light);   /* Color del texto */
     font-size: 1.2rem;
-    font-family:"Fredoka", sans-serif;
-
+    font-family: "Fredoka", sans-serif;
     display: flex;
     justify-content: center; /* Centra el texto horizontalmente */
     align-items: center; /* Centra el texto verticalmente */
-
-    margin:2rem;
+    margin: 2rem;
     padding: 1rem;
-    gap:10px;
+    gap: 10px;
 }
 
-.home_redes_svg_github{
+.home_redes_svg_github {
     fill: #ffffff;
     height: 2rem;
 }
@@ -230,11 +242,11 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap:3rem;
-    background-color: white ;
+    gap: 3rem;
+    background-color: white;
 }
 
-.repositorio_content{
+.repositorio_content {
     width: 100%;
     height: 50%;
     display: flex;
@@ -242,20 +254,19 @@
     align-items: center;
 }
 
-
-.repositorio_content_block{
+.repositorio_content_block {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    background-color: var(--color-negro);
+    background-color: var(--color-dark);
     width: 20%;
     border-radius: 30px;
     padding: 10px;
 }
 
-.repositorio_content_picture{
-    background-color: var(--color-azul-real); /* Color de fondo para evitar espacios en blanco */
+.repositorio_content_picture {
+    background-color: var(--color-primary); /* Color de fondo para evitar espacios en blanco */
     width: 100%;
     height: 60%;
     overflow: hidden;
@@ -266,44 +277,65 @@
 }
 
 .repositorio_content_picture_img {
-    
     width: 100%;
     height: 100%;
     object-fit: fill;
     border-radius: 20px 20px 0px 0px;
 }
 
-.repositorio_text_title{
-    padding: 15px ;
-    font:var(--font-repo-title);
-    color: var(--color-js)
-}
-
-.repositorio_text{
-    font: var(--font-repo-text);
-    padding: 15px ;
-    color: var(--color-blanco)
-}
-
-.repositorio_h1{
-    font:var(--font-h1);
+.repositorio_text_title {
+    padding: 15px;
+    font: var(--font-repo-title);
     color: var(--color-js);
 }
 
+.repositorio_text {
+    font: var(--font-repo-text);
+    padding: 15px;
+    color: var(--color-light);
+}
 
+.repositorio_h1 {
+    font: var(--font-h1);
+    color: var(--color-js);
+}
 
-
-
-/* ====================== FOOTER ====================== */
+/*====================== FOOTER ======================*/
 footer {
-    height:5dvh;
+    height: 5dvh;
     width: 100%;
-    color: var(--color-blanco);
+    color: var(--color-light);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 998;
-    background-color: var(--color-azul-real);
-
+    background-color: var(--color-primary);
 }
 
+/*MEDIA QUERIES */
+h1 {
+    font-size: 2.25rem; /* 4xl = 36px */
+    line-height: 1.25; /* leading-tight */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem; /* 5xl = 48px */
+        line-height: 1.375; /* leading-snug */
+    }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3.75rem; /* 6xl = 60px */
+    }
+}
+
+/* Escritorio */
+@media (min-width: 1280px) {
+    h1 {
+        font-size: 4.5rem; /* 7xl = 72px */
+    }
+}
