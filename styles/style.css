@@ -2,51 +2,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-
     /* 🎨 Colores */
-        --color-negro: #0a0a0a;
-        --color-blanco: #ffffff;
-        --color-trans: hsla(0, 0%, 100%, 0.5); /* Blanco con transparencia */
-        --color-azul-real: #0057B7;
-        --color-suave: #292C34;
+    --color-negro: #0a0a0a;
+    --color-blanco: #ffffff;
+    --color-trans: hsla(0, 0%, 100%, 0.5); /* Blanco con transparencia */
+    --color-azul-real: #0057B7;
+    --color-suave: #292C34;
 
     /* 🎨 Colores de tecnologías */
-        --color-html: #F16529;
-        --color-css: #663399;
-        --color-js: #F0DB4F;
+    --color-html: #F16529;
+    --color-css: #663399;
+    --color-js: #F0DB4F;
 
     /* 🖋️ Tipografías generales */
-        --font-primary: "Fredoka", sans-serif;
-        --font-secundary: "IBM Plex Mono", monospace;
+    --font-primary: "Fredoka", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
 
-    /* 🔤 Tamaños de fuente */
-        --size-h1: 4rem;
-        --size-name: 1.5rem;
-        --size-subtitle: 1.5rem;
-        --size-skill: 1.2rem;
-        --size-repo-title: 1.5rem;
-        --size-repo-text: 1rem;
+    /* 🔤 Tamaños de fuente responsivos con clamp(min, preferido, max) */
+    --size-h1: clamp(2rem, 5vw, 4rem); /* Ajuste entre 2rem y 4rem */
+    --size-name: clamp(1rem, 3vw, 1.5rem);
+    --size-subtitle: clamp(1rem, 3vw, 1.5rem);
+    --size-skill: clamp(1rem, 2.5vw, 1.2rem);
+    --size-repo-title: clamp(1rem, 3vw, 1.5rem);
+    --size-repo-text: clamp(0.8rem, 2vw, 1rem);
 
     /* 🔥 Pesos de fuente */
-        --weight-light: 300;
-        --weight-regular: 400;
-        --weight-medium: 500;
-        --weight-bold: 700;
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
 
-    /* 📏 Espaciados */
-        --spacing-xs: 0.5rem;
-        --spacing-sm: 1rem;
-        --spacing-md: 2rem;
-        --spacing-lg: 4rem;
+    /* 📏 Espaciados responsivos */
+    --spacing-xs: clamp(0.3rem, 1vw, 0.5rem);
+    --spacing-sm: clamp(0.5rem, 1.5vw, 1rem);
+    --spacing-md: clamp(1rem, 3vw, 2rem);
+    --spacing-lg: clamp(2rem, 5vw, 4rem);
+
+    /* 📏 Tamaños adaptativos */
+    --width-container: min(90%, 1200px); /* Máximo de 1200px pero adaptable */
+    --img-size: clamp(10rem, 20vw, 20rem); /* Imágenes redimensionables */
 
     /* 🏠 Estilos específicos */
-        --font-h1: var(--weight-bold) var(--size-h1)/1.2 var(--font-primary);
-        --font-name: var(--weight-light) var(--size-name)/1.2 var(--font-mono);
-        --font-subtitle: var(--weight-light) var(--size-subtitle)/1.2 var(--font-primary);
-        --font-skill-svg: var(--weight-regular) var(--size-skill)/1.2 var(--font-primary);
-        --font-repo-title: var(--weight-bold) var(--size-repo-title)/1.2 var(--font-primary);
-        --font-repo-text: var(--weight-medium) var(--size-repo-text)/1.2 var(--font-primary);
+    --font-h1: var(--weight-bold) var(--size-h1)/1.2 var(--font-primary);
+    --font-name: var(--weight-light) var(--size-name)/1.2 var(--font-mono);
+    --font-subtitle: var(--weight-light) var(--size-subtitle)/1.2 var(--font-primary);
+    --font-skill-svg: var(--weight-regular) var(--size-skill)/1.2 var(--font-primary);
+    --font-repo-title: var(--weight-bold) var(--size-repo-title)/1.2 var(--font-primary);
+    --font-repo-text: var(--weight-medium) var(--size-repo-text)/1.2 var(--font-primary);
 }
+
 
 
 /* Reset de estilos */
