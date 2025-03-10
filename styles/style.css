@@ -2,44 +2,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-    --color-negro: #0a0a0a; /* negro */
-    --color-blanco: #FFFFFF; /* blanco */
-    --color-trans: #ffffff7e; /* blanco transparente */
-    --color-azul-real: #0057B7; /* Azul real */
-    --color-suave: #292C34;
 
-    --color-html: #F16529;
-    --color-css:#663399;
-    --color-js:#F0DB4F;
+    /* 🎨 Colores */
+        --color-negro: #0a0a0a;
+        --color-blanco: #ffffff;
+        --color-trans: hsla(0, 0%, 100%, 0.5); /* Blanco con transparencia */
+        --color-azul-real: #0057B7;
+        --color-suave: #292C34;
 
-    /*--font: style | variant | weight | size | line-height | family | family | serif*/
-    --font-h1: normal normal 700 4rem/1.2 "Fredoka", "Arial", sans-serif;
-    --font-name: normal normal 700 5rem/1.2 "IBM Plex Mono", "Arial", monospace;
-    --font-subtitle: normal normal 300 1rem/1.2 "Fredoka", "Arial", sans-serif;
-    --font-skill-svg:normal normal 500 1.2rem/1.2 "Fredoka", "Arial", sans-serif;
-    --font-repo-title:normal normal 700 1.5rem/1.2 "Fredoka", "Arial", sans-serif;
-    --font-repo-text:normal normal 500 1rem/1.2 "Fredoka", "Arial", sans-serif;
+    /* 🎨 Colores de tecnologías */
+        --color-html: #F16529;
+        --color-css: #663399;
+        --color-js: #F0DB4F;
 
+    /* 🖋️ Tipografías generales */
+        --font-primary: "Fredoka", sans-serif;
+        --font-secundary: "IBM Plex Mono", monospace;
 
-    /* font-optical-sizing: auto; */
-    /* font-variation-settings: "wdth" 100; */
+    /* 🔤 Tamaños de fuente */
+        --size-h1: 4rem;
+        --size-name: 1.5rem;
+        --size-subtitle: 1.5rem;
+        --size-skill: 1.2rem;
+        --size-repo-title: 1.5rem;
+        --size-repo-text: 1rem;
+
+    /* 🔥 Pesos de fuente */
+        --weight-light: 300;
+        --weight-regular: 400;
+        --weight-medium: 500;
+        --weight-bold: 700;
+
+    /* 📏 Espaciados */
+        --spacing-xs: 0.5rem;
+        --spacing-sm: 1rem;
+        --spacing-md: 2rem;
+        --spacing-lg: 4rem;
+
+    /* 🏠 Estilos específicos */
+        --font-h1: var(--weight-bold) var(--size-h1)/1.2 var(--font-primary);
+        --font-name: var(--weight-light) var(--size-name)/1.2 var(--font-mono);
+        --font-subtitle: var(--weight-light) var(--size-subtitle)/1.2 var(--font-primary);
+        --font-skill-svg: var(--weight-regular) var(--size-skill)/1.2 var(--font-primary);
+        --font-repo-title: var(--weight-bold) var(--size-repo-title)/1.2 var(--font-primary);
+        --font-repo-text: var(--weight-medium) var(--size-repo-text)/1.2 var(--font-primary);
 }
+
 
 /* Reset de estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--color-negro); /* Color negro para el fondo */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh;
-}
-
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: var(--color-negro);
+        font-family: var(--font-primary);
+        min-height: 100dvh;
+    }
 
 /* ====================== MAIN ====================== */
 .main_class {
@@ -51,61 +71,55 @@ body {
     align-items: center;
 }
 
-/* Aplicamos tamaños para todos los Sección */
-section {
-    min-height: 100dvh;
-    height: 100dvh;
-    width: 100%;
-}
-
-
 /* ______________Section Home______________*/
 
 .home { /* section Home */
+
     display: flex;
     justify-content:center;
     align-items: center;
-    height: 100%;
+    height: 100dvh;
     width:100%;
+
 }
 .home_div{ /* Ordena los elementos del home */
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
+
 .home_picture{ /*Contendor de la foto del Desarrollador*/
     position: relative;
-    display: inline-block;
-    border-radius: 50%;
-    border: 6px solid var(--color-azul-real);
-    overflow: visible;
     width: 20rem;
     height: 20rem;
+    margin-top: 4rem;
 }
 .home_picture_img{ /* Foto del Desarrollador */
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover; 
     border-radius: 50%;
-    border: 5px solid var(--color-negro);
+    border:0.5rem solid var(--color-azul-real);
 }
-.home_name{ /* Texto donde va el nombre del desarrollador */
+
+.home_name,
+.home_name_user {
     font-family: "IBM Plex Mono", monospace;
     font-size: 1.5rem;
-    font-weight: 300;
-    font-style: normal;
     padding-top: 2rem;
+}
+
+.home_name {
+    font-weight: 300;
     color: var(--color-trans);
 }
-.home_name_user{ /* Texto personalizado del desarrollador */
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 1.5rem;
+
+.home_name_user {
     font-weight: 700;
-    font-style: normal;
-    padding-top: 2rem;
     color: var(--color-azul-real);
 }
+
 .home_title { /* H1 */
     font: var(--font-h1);
     font-optical-sizing: auto;
@@ -119,11 +133,11 @@ section {
     font: var(--font-subtitle);
     font-optical-sizing: auto;
     font-variation-settings: "wdth" 100;
-    text-align: left;
+    text-align: justify;
     padding: 1rem 2rem;
     width: 100%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     margin-top: 2rem;
     padding-bottom: 2rem;
     color: var(--color-trans);
@@ -203,17 +217,17 @@ section {
     height: 2rem;
 }
 
-
-/* Sección About */
+/* ______________Section About______________*/
 .repositorio {
     width: 100%;
-    height: 100dvh;
+    height: 50%;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     gap:3rem;
+    background-color: white ;
 }
 
 .repositorio_content{
@@ -232,27 +246,27 @@ section {
     align-items: start;
     background-color: var(--color-suave);
     width: 20%;
-    height: 80%;
     border-radius: 30px;
-    overflow: hidden;
+    padding: 10px;
 }
 
-.repositorio_picture{
+.repositorio_content_picture{
     background-color: var(--color-azul-real); /* Color de fondo para evitar espacios en blanco */
-    border-radius: 30px;
     width: 100%;
     height: 60%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px 20px 0px 0px;
 }
 
-.repositorio_picture_img {
+.repositorio_content_picture_img {
+    
     width: 100%;
     height: 100%;
     object-fit: fill;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .repositorio_text_title{
