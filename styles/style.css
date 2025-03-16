@@ -1,21 +1,16 @@
 :root {
     /* Paleta de colores */
     --color-primary         : #0057B7;  /* Azul Real */
-    --color-secondary       : #FFB703;  /* Amarillo dorado */
+    --color-secondary       : #F0DB4F;  /* Amarillo dorado */
 
     /* Colores neutros */
     --color-light           : #F5F5F5;  /* Blanco humo */
-    --color-gray            : #7A7A7A;  /* Gris medio */
+    --color-gray            : #333333;  /* Gris medio */
     --color-dark            : #0A0A0A;  /* Negro */
 
     /* Colores de estados */
     --color-success         : #28A745;  /* Verde éxito */
     --color-error           : #D72638;  /* Rojo error */
-
-    /* Colores de tecnologías */
-    --color-html            : #F16529;
-    --color-css             : #2965F1;
-    --color-js              : #F0DB4F;
 
     /* Tipografías generales */
     --font-primary          : "Roboto", sans-serif;
@@ -26,7 +21,7 @@
     --font-style-normal     : normal;
 
     /* Tamaños de fuente (responsivos) */
-    --font-size-xl          : clamp(2rem,     5vw,    4rem);
+    --font-size-xl          : clamp(1.6rem,   5vw,    3rem);
     --font-size-lg          : clamp(1.25rem,  3.5vw,  2rem);
     --font-size-md          : clamp(1rem,     3vw,    1.5rem);
     --font-size-sm          : clamp(0.875rem, 2.5vw,  1.25rem);
@@ -50,200 +45,236 @@
     --font-width-normal        : 100;
 
     /* Estilos de texto optimizados */
+    --font-nav      : var(--font-style-normal) var(--font-weight-bold)     var(--font-size-sm) / var(--font-line-xs) var(--font-primary);
     --font-h1       : var(--font-style-normal) var(--font-weight-bold)     var(--font-size-xl) / var(--font-line-xl) var(--font-primary);
     --font-title    : var(--font-style-normal) var(--font-weight-bold)     var(--font-size-lg) / var(--font-line-lg) var(--font-primary);
-    --font-subtitle : var(--font-style-normal) var(--font-weight-regular)  var(--font-size-md) / var(--font-line-md) var(--font-primary);
+    --font-subtitle : var(--font-style-normal) var(--font-weight-regular)  var(--font-size-sm) / var(--font-line-md) var(--font-primary);
     --font-body     : var(--font-style-normal) var(--font-weight-regular)  var(--font-size-sm) / var(--font-line-sm) var(--font-primary);
     --font-caption  : var(--font-style-normal) var(--font-weight-medium)   var(--font-size-xs) / var(--font-line-xs) var(--font-primary);
+    --font-fieldset : var(--font-style-normal) var(--font-weight-bold)     var(--font-size-xs) / var(--font-line-xs) var(--font-primary);
 
-    /* Espaciados responsivos */
-    --spacing-lg    : clamp(2rem,  5vw,  4rem);
-    --spacing-md    : clamp(1rem,  3vw,  2rem);
-    --spacing-sm    : clamp(0.5rem,1.5vw,1rem);
-    --spacing-xs    : clamp(0.3rem,1vw,  0.5rem);
-
-    /* Tamaños adaptativos */
-    --width-container  : min(90%,1200px);  
-    --img-size         : clamp(10rem,20vw,20rem);
 }
 
-/* Reset de estilos */
-* {
+* {         /* Reset de estilos */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
 }
 
 body {
-    background-color: var(--color-dark);
+    background-color: var(--color-light);
     font-family: var(--font-primary);
-    min-height: 100dvh;
 }
 
 /* ====================== MAIN ====================== */
 .main_class {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ______________Section Home______________*/
-
-.home { /* section Home */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100dvh;
-    width: 100%;
-}
-
-.home_div { /* Ordena los elementos del home */
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+}
+
+    nav{
+        color:var(--color-light);
+        width: 100%;
+        background-color: var(--color-primary);
+        position: fixed;
+        z-index: 1000;
+        box-shadow: 0px 4px 10px var(--color-dark);
+        transition: all 0.3s ease-in-out;
+    }
+
+        nav.scrolled{
+            padding: 5px 0;
+            
+        }
+    
+    nav ul{
+        list-style: none;
+        display:flex;
+        flex-direction:row;
+        padding: 10px 20px 10px 20px;
+        justify-content:flex-end;
+        gap:20px;
+    }
+    
+    nav li{
+        height:2.5rem;
+        font:var(--font-nav);
+        color:var(--color-light);
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        position: relative;
+        overflow: hidden;
+    }
+        nav li:not(:first-child)::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: var(--color-secondary);
+            bottom: 0;
+            left: -100%;
+            transition: left 0.3s ease-in-out;
+        }
+        
+        nav li:not(:first-child):hover::after {
+            left: 0;
+        }
+    
+    nav li:first-child{
+        flex: 1 1 auto;
+        font-size: 30px;
+    }
+        nav li:first-child:hover {
+            color: var(--color-secondary); 
+            transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+        
+
+/* ______________Section Home______________ */
+.home {
     width: 100%;
-}
-
-.home_picture { /* Contenedor de la foto del Desarrollador */
-    position: relative;
-    width: 20rem;
-    height: 20rem;
-    margin-top: 4rem;
-}
-
-.home_picture_img { /* Foto del Desarrollador */
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 50%;
-    border: 0.5rem solid var(--color-primary);
-}
-
-.home_name,
-.home_name_user {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 1.5rem;
-    padding-top: 2rem;
-}
-
-.home_name {
-    font-weight: 300;
-    color: var(--color-light);
-}
-
-.home_name_user {
-    font-weight: 700;
-    color: var(--color-primary);
-}
-
-.home_title { /* H1 */
-    font: var(--font-h1);
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    padding-top: 2rem;
-    color: var(--color-light);
-}
-
-.home_subtitle { /* Texto debajo del H1 */
-    font: var(--font-subtitle);
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    text-align: justify;
-    padding: 1rem 2rem;
-    width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-    color: var(--color-light);
-}
-
-.home_skills {
+    height: 100dvh;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
-    margin-bottom: 2rem;
+    align-items: center;
 }
+    .home_contenedor{ /*div en forma de card para ambos contenedores del home*/
+        width: 85%;
+        height: 80%;
+        margin-top: 5rem;
+        background-color: var(--color-gray);
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.home_skills_svg {
-    font: var(--font-skill-svg);
-    width: 10rem;
-    height: 3rem;
-    color: var(--color-light);  
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 2rem;
-    padding: 1rem;
-    gap: 10px;
-    background-color: var(--color-secondary);
-    border-radius: 50px;
-}
+        .home_left { /* CONTENEDOR HOME IZQUIERDO */
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
 
-.home_skills_svg_github {
-    fill: #ffffff;
-    height: 2rem;
-}
+            .home_picture { /* Contenedor foto */
+                position: relative;
+                width: 10rem;
+                height: 10rem;
+            }
 
-.home_skills_svg_html {
-    fill: #ff4800;
-    height: 2rem;
-}
+            .home_picture_img { /* Foto */
+                width: 100%;
+                height: 100%;
+                object-fit: cover; 
+                border-radius: 50%;
+                border: 0.3rem solid var(--color-primary);
+            }
 
-.home_skills_svg_css {
-    fill: #663399;
-    height: 2rem;
-}
+            .home_name { /*Nombre */
+                font: var(--font-title);
+                font-size: var(--font-size-md);
+                color: var(--color-primary);
+                font-optical-sizing: auto;
+                font-variation-settings: "wdth" 100;
+            }
+            
+            .home_title { /* Titulo */
+                font: var(--font-h1);
+                color: var(--color-secondary);
+                text-align: center;
+                margin: 2rem 0 2rem 0;
+            }
 
-.home_skills_svg_js {
-    fill: #eeff00;
-    height: 2rem;
-}
+            .home_subtitle { /* Subtitulo */
+                font: var(--font-subtitle);
+                text-align: justify; 
+                color: var(--color-light);
+                padding:1.5rem;
+            }
 
-.home_redes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin: 2rem;
-}
 
-.home_redes_svg {
-    width: 10rem;
-    height: 3.5rem;   /* Alto del rectángulo */
-    color: var(--color-light);   /* Color del texto */
-    font-size: 1.2rem;
-    font-family: "Fredoka", sans-serif;
-    display: flex;
-    justify-content: center; /* Centra el texto horizontalmente */
-    align-items: center; /* Centra el texto verticalmente */
-    margin: 2rem;
-    padding: 1rem;
-    gap: 10px;
-}
 
-.home_redes_svg_github {
-    fill: #ffffff;
-    height: 2rem;
-}
+        .home_right { /*CONTENEDOR HOME DERECHO*/
+            width: 50%;
+            height: 100%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:2rem;
+        }
 
-/* ______________Section About______________*/
+            .home_contenedor_title{
+                font: var(--font-title);
+                color: var(--color-light);
+            }
+
+            .fieldset {
+                width: 90%;
+                height: 9.5rem;     
+                font: var(--font-fieldset);
+                border: 3px solid var(--color-primary);
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            
+            .legend {
+                color: var(--color-secondary);
+                padding: 1rem;
+                margin-left: 20px;
+            }
+            .Fieldset_item{
+                color: var(--color-light);
+                font-size: var(--font-size-xs);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                fill: var(--color-light);
+                padding: 1rem;
+            }
+
+            .home_skill_item {
+                height: 2.5rem;
+                background-color: #cf383800;
+            }
+
+  
+
+
+
+
+
+
+
+/* ______________Section Repositorios______________*/
+
 .repositorio {
     width: 100%;
-    height: 50%;
-    color: white;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    gap: 3rem;
-    background-color: white;
+    
+}
+
+.repositorio_h1 {
+    font: var(--font-h1);
+    color: var(--color-primary);
+    
 }
 
 .repositorio_content {
@@ -252,6 +283,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border: 2px solid var(--color-primary);
 }
 
 .repositorio_content_block {
@@ -259,14 +291,14 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    background-color: var(--color-dark);
+    background-color: var(--color-gray);
     width: 20%;
     border-radius: 30px;
     padding: 10px;
 }
 
 .repositorio_content_picture {
-    background-color: var(--color-primary); /* Color de fondo para evitar espacios en blanco */
+    background-color: var(--color-dark); /* Color de fondo para evitar espacios en blanco */
     width: 100%;
     height: 60%;
     overflow: hidden;
@@ -286,7 +318,7 @@ body {
 .repositorio_text_title {
     padding: 15px;
     font: var(--font-repo-title);
-    color: var(--color-js);
+    color: var(--color-secondary);
 }
 
 .repositorio_text {
@@ -295,10 +327,6 @@ body {
     color: var(--color-light);
 }
 
-.repositorio_h1 {
-    font: var(--font-h1);
-    color: var(--color-js);
-}
 
 /*====================== FOOTER ======================*/
 footer {
@@ -312,30 +340,35 @@ footer {
     background-color: var(--color-primary);
 }
 
-/*MEDIA QUERIES */
+/* Mobile (base) */
 h1 {
-    font-size: 2.25rem; /* 4xl = 36px */
-    line-height: 1.25; /* leading-tight */
+    font-size: 2.25rem; /* 36px */
+    line-height: 1.25;
 }
 
-/* Tablet */
+
+/* Tablets */
 @media (min-width: 768px) {
     h1 {
-        font-size: 3rem; /* 5xl = 48px */
-        line-height: 1.375; /* leading-snug */
+        font-size: 3rem; /* 48px */
+        line-height: 1.375;
     }
+    
+
 }
 
-/* Laptop */
+/* Laptops */
 @media (min-width: 1024px) {
     h1 {
-        font-size: 3.75rem; /* 6xl = 60px */
+        font-size: 3.75rem; /* 60px */
     }
+
 }
 
 /* Escritorio */
 @media (min-width: 1280px) {
     h1 {
-        font-size: 4.5rem; /* 7xl = 72px */
+        font-size: 4.5rem; /* 72px */
     }
+
 }
