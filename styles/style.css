@@ -89,16 +89,15 @@ body {
 
         nav.scrolled{
             padding: 5px 0;
-            
         }
     
     nav ul{
         list-style: none;
         display:flex;
         flex-direction:row;
-        padding: 10px 20px 10px 20px;
-        justify-content:flex-end;
+        padding: 10px 30px 10px 20px;
         gap:20px;
+        
     }
     
     nav li{
