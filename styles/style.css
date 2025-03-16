@@ -61,7 +61,7 @@
     box-sizing: border-box;
     font-optical-sizing: auto;
     font-variation-settings: "wdth" 100;
-       /* outline: 1px dashed red;*/
+    /*outline: 1px dashed red;*/
 }
 
 html, body {
@@ -80,6 +80,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-dark);
 }
 
     nav{
@@ -149,7 +150,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-dark);
     margin-bottom: 2rem;
 }
 
@@ -162,7 +162,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       padding-top: 4rem;
+        padding-top: 4rem;
     }
 
         .home_left, .home_right{ /* CONTENEDORES HOME */
@@ -259,12 +259,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
     .repositorio_h1 {
         font: var(--font-h1);
-        color: var(--color-primary);
+        color: var(--color-light);
+        padding: 2rem;
         
     }
 
@@ -275,7 +275,6 @@ body {
         flex-direction:column;
         justify-content: space-evenly;
         align-items: center;
-        background-color: #28A745;
         gap:15px;
         
     }
@@ -292,7 +291,7 @@ body {
     }
 
     .repositorio_content_picture {
-        background-color: var(--color-dark); /* Color de fondo para evitar espacios en blanco */
+        background-color: var(--color-secondary);
         width: 100%;
         height: 60%;
         overflow: hidden;
@@ -320,6 +319,53 @@ body {
         padding: 15px;
         color: var(--color-light);
     }
+
+/* ______________Section Contacto______________*/
+
+.contacto {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    font:var(--font-title);
+    margin-top: 2rem;
+}
+
+    .contacto-container {
+        width: 100%;
+        height: 5rem;     
+        font: var(--font-fieldset);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        fill:var(--color-light);
+    }
+
+    .contacto-container_div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacto-item{
+        color: var(--color-light);
+        font-size: var(--font-size-xs);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .home_skill_item {
+        height: 2.5rem;
+    }
+
 
 
 /*====================== FOOTER ======================*/
