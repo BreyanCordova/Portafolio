@@ -1,0 +1,447 @@
+/* Configuracion general de section */
+section{
+  height: 100lvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  }
+  /* Configuracion general de los div>contenedor dentro de section */
+  .contenedor{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+
+/*----------------*/
+/* SECTION HEADER */
+/*----------------*/
+/* Navbar */
+nav{
+  font: var(--font-bold) var(--font-H6) var(--font-secondary);
+  width: 100%;
+  background-color: var(--color-primary);
+  position: fixed;
+  padding: 10px 40px;
+  box-shadow: 0px 4px 10px var(--color-dark);
+  z-index: 1000;
+ }
+  /* Titulo "Portafolio" arriba del navbar */
+  nav .title{
+    text-align: center;
+    color: var(--color-accent);
+    font-size: 20px;
+   }
+  /* Navbar - ul*/
+  nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 20px;
+   }
+    /* Navbar - li*/
+    nav ul li{
+      color: var(--color-light);
+      display: flex;
+      align-items: center;
+      transition: color 0.1s ease-in-out;
+     }
+    /* Efecto hover */
+    nav ul li:not(:first-child):hover{
+      color: var(--color-secondary);
+     }
+    /* Primer LI a la izquierda */
+    nav ul li:first-child {
+      color: var(--color-accent);
+      font-size: 30px;
+      font-weight: bold;
+      margin-right: auto;
+      display: none;
+     }
+    /* Estilos del UL LI A */
+    nav ul li a {
+      text-decoration: none; /* Quita el subrayado */
+      color: inherit; /* Usa el color del texto definido en el nav */
+     }
+
+/*----------------*/
+/* SECTION INICIO */
+/*----------------*/
+
+/* Inicio */
+.inicio{
+  background: var(--color-grad1);
+  }
+  /* Imagen de perfil */
+  .inicio img {
+    height: 12rem;
+    width: 10rem;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border:3px solid var(--color-dark);
+   }
+  /*Configura el H1 solo para inicio*/
+  .inicio h1{
+    font-family: var(--font-tertiary);
+    color: var(--color-light);
+    text-shadow: 1px 1px 10px black;
+  }
+  /*Configura el H6 solo para inicio*/
+  .inicio h6{
+    color: var(--color-accent);
+    font-family: var(--font-primary);
+    text-shadow: 1px 1px 5px black;
+    padding: 0 0 1.5rem 0;
+   }
+  /* Botón de Contactame */
+  .inicio .btn {
+    cursor: pointer;
+    font-weight: var(--font-bold);
+    color: var(--color-light);
+    text-decoration: none;
+    text-shadow: 0 0 5px black;
+    display: inline-block;
+    padding: 5px 20px;
+    margin-top: 2rem;
+    background: var(--color-secondary);
+    border-radius: 20px;
+    border: 3px solid var(--color-dark);
+    transition: 0.5s;
+   }
+  /* Estilo para enlace de Botón de Contactame*/
+  .inicio .btn a {
+    display: block; /* Hace que el enlace ocupe todo el botón */
+   }
+  /* Efecto hover de Boton Contactame */
+  #inicio .btn:hover {
+    background: var(--color-accent);
+    color: var(--color-dark);
+    text-shadow: 0 0 0 black;
+   } 
+
+/*----------------*/
+/* SECTION PERFIL */
+/*----------------*/
+
+/* Configuracion de Perfil*/
+#perfil{
+  background:var(--color-grad2);
+  }
+  .perfil h2{
+    font-family: var(--font-secondary);
+    padding: 30px; 
+  }
+  /*Estilo del parrafo*/
+  .perfil h6{
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    font-weight: var(--font-bold);
+    max-width: 90%;
+    text-align: justify;
+    hyphens: auto;
+    padding: 10px;   
+   }
+  /*DIV PRINCIPAL*/
+  .stack_contenedor_principal{ 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:70%;
+    padding: 10px;
+    gap:10px;
+  }
+  /*DiV GRUPOS*/
+  .stack_contenedor_grupo{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-light);
+    border-radius: 20px;
+    border: 3px solid var(--color-dark);
+    box-shadow: 3px 5px 4px 1px rgba(0, 0, 0, 0.5);
+  }
+  /* Parrafo de Grupo */
+  .stack_contenedor_grupo p {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .stack_contenedor{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .stack_item{
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 5px 10px;
+  }
+  
+  .stack_item_1{
+    display: flex;
+    gap: 10px;
+    width: 50%;
+  }
+
+  .stack_item_1 span{
+    display: block;
+    font-weight: bold;
+    width: 100%;
+  }
+  
+  .stack_item_2{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+    width: auto;
+    padding: 5px;
+  }
+  /*Configura los svg*/
+  .stack_svg{
+    height: 2rem;
+    width: 3rem;
+    fill: var(--color-dark);
+  }
+/*------------------*/
+/* SECTION PROYECTO */
+/*------------------*/
+#proyecto {
+  background: var(--color-grad3);
+}
+  /*H2*/
+  .proyecto h2{
+    font-family: var(--font-secondary);
+  }
+  /* Ajuste de carrusel */
+  .carrusel {
+    width: 90%;
+    height: auto;
+    max-width: 1200px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  /* Contenedor de los slides */
+  .carrusel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  /* Configuración de los slides */
+  .carrusel-slides {
+    display: flex;
+    transition: transform 0.5s ease-out;
+    width: 100%;
+    gap: 20px;
+  }
+  /* Cada slide ocupa el 100% del carrusel */
+  .carrusel-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 100%;
+    text-align: center;
+    background-color: var(--color-light);
+    border-radius: 20px;
+    border: 4px solid var(--color-dark);
+  }
+  /* Ajustar imágenes dentro del carrusel */
+  .carrusel-slide img {
+    width: 85%;
+    max-width: 400px;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--color-dark);
+    background-color: var(--color-primary);
+    margin-top: 1rem;
+  }
+  /* Ajustar el H3 de section dentro del carrusel */
+  #proyecto h3{
+    font-family: var(--font-secondary);
+    padding: 10px;
+  }
+  /* Ajustar el P de section dentro del carrusel */
+  #proyecto p{
+    font-family: var(--font-primary);
+    font-weight: var(--font-bold);
+    width: 95%;
+    margin:0.5rem;
+  }
+  /* Ajustar el btn "Ver Proyecto" dentro del carrusel */
+  #proyecto .btn-ver{
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: var(--color-light);
+    font-weight: var(--font-bold);
+    padding: 10px 24px;
+    margin: 10px;
+    background: var(--color-primary);
+    border-radius: 20px;
+    border: 3px solid var(--color-dark);
+    transition: transform 0.2s ease-in-out;
+  }
+  /* Efecto hover de Boton Contactame */
+  #proyecto .btn-ver:hover{
+    transform: scale(1.1);
+    background: var(--color-secondary);
+    box-shadow: 0px 0px 10px 2px black;
+  } 
+  /* Botones de navegación */
+  .carrusel-btn {
+    display: none;
+  }
+  
+  /* parrafo de deslizar*/
+  .carrusel-deslizar{
+    font-size: var(--font-H8);
+    font-weight: var(--font-bold);
+  }
+
+
+/*------------------*/
+/* SECTION CONTACTO */
+/*------------------*/
+#contacto{
+  background: var(--color-grad6);
+  }
+  .contacto h2{
+      font-family: var(--font-tertiary);
+      padding: 10px; 
+      color: var(--color-primary);
+      }
+  .contacto h6{
+      font-weight: var(--font-bold);
+      text-align: center;
+      margin: 20px 0;
+      }
+      
+/* Div que contiene las redes sociales*/
+.redes{
+  display: flex;
+    gap: 20px; /* Espaciado entre los elementos */
+  }           
+  /* a href contiene los svg y span */
+   .red {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none; /* Evita subrayado en el texto */
+    color: inherit; /* Mantiene el color */
+    transition: transform 0.2s ease-in-out;
+    }
+    .red:hover {
+      transform: scale(1.1);
+      color: var(--color-secondary);
+      }
+      /* configura los svg*/
+      .red_item {
+        width: 40px; /* Tamaño del SVG */
+        height: 40px;
+          fill: var(--color-dark);
+      }
+      .red:hover .red_item{
+        fill: var(--color-secondary);
+      }
+      /* Configura los p */       
+      .red p {
+          font-weight: 700;
+          font-size: 1rem;
+          }
+        .red:hover p{
+          fill: var(--color-secondary);
+        }
+
+/*------------------*/
+/* SECTION FOOTER   */
+/*------------------*/
+
+footer {
+  height: 5dvh;
+  width: 100%;
+  font-weight: var(--font-bold);
+  color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 998;
+  background-color: var(--color-primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 
+  #contacto form{
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+  #contacto .campo{
+      margin-bottom: 15px;
+      text-align: left;
+      }
+  #contacto label{
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      color: var(--color-dark);
+      }
+  #contacto input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+      }
+  #contacto button{
+      background: var(--color-secondary);
+      color: var(--color-light);
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: 0.3s;
+      }
+  #contacto button:hover{
+      background: #cc5500;
+      }
+*/

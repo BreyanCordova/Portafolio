@@ -1,0 +1,108 @@
+/* ===================== Movil Estandar ===================== */
+@media (min-width: 768px){
+
+}
+
+
+
+
+
+/* ===================== Tablet / PC ===================== */
+@media (min-width: 1024px){
+
+/*----------------*/
+/* SECTION HEADER */
+/*----------------*/
+
+/*Animacion del navbar*/
+nav{
+  transition: all 0.5s ease-in-out;
+}
+/*Animacion del navbar al scrollear*/
+nav.scrolled {
+  padding: 0px 40px;
+}
+/*Oculta el primer LI del navbar*/
+nav .title{
+  display: none;
+}
+/* Primer LI a la izquierda */
+nav ul li:first-child {
+  display: block;
+}
+
+/*----------------*/
+/* SECTION INICIO */
+/*----------------*/
+
+
+/*----------------*/
+/* SECTION PERFIL */
+/*----------------*/
+
+#perfil{
+  min-height: 100lvh;
+}
+/*Coloca en Horizontal los div del sertion #perfil*/
+.stack_contenedor_principal{ 
+  flex-direction: row;
+}
+/*DiV GRUPOS*/
+.stack_contenedor_grupo{
+  width: 50%;
+  height: 100%;
+}
+
+/*------------------*/
+/* SECTION PROYECTO */
+/*------------------*/
+
+/*Reduce el ancho del carrusel*/
+.carrusel{
+  width: 50%;
+}
+/*Imagen del carrusel ocupa el 100%*/
+.carrusel-slide img{
+  width: 100%;
+}
+/* Botones de navegación */
+.carrusel-btn {
+  display: block;
+  position: absolute;
+  top: 80%;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  transition: background 0.1s ease-out;
+  z-index: 10;
+}
+/*Boton de navegacion: hover*/
+.carrusel-btn:hover {
+  background: var(--color-secondary);
+}
+/*Boton Prev*/
+.prev {
+  left: 50px;
+}
+/*Boton Next*/
+.next {
+  right: 50px;
+}
+/*Oculta el Parrafo que indica desplazamiento en el carrusel*/
+.carrusel-deslizar{
+  display: none;
+}
+
+/*------------------*/
+/* SECTION CONTACTO */
+/*------------------*/
+
+/*------------------*/
+/* SECTION FOOTER   */
+/*------------------*/
+}
+
